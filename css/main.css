@@ -105,7 +105,17 @@ textarea {
   overflow-y: scroll;
 }
 
+p{
+  padding: 5px;
+}
 
+.text-left{
+  color: red;
+}
+
+.text-right{
+  color:blue;
+}
 @media (min-width:720px) {
 .reponse{
   height: 600px;
