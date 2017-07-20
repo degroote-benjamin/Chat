@@ -102,7 +102,7 @@ textarea {
   height: 200px;
   border : 2px solid black;
   border-radius: 4px;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 p{
