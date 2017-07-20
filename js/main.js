@@ -2,12 +2,10 @@ var robot = ["bonjour", "++", "bonjour", "ca va?", "il fait chaud"]
 var compt = 0
 
 
-$(document).ready(function() {
     $('.submit').on('click', function() {
 chat()
+$(".texte").focus()
     });
-
-});
 
 
 $(".texte").keypress(function(e) {
