@@ -15,12 +15,12 @@ $(".texte").keypress(function(e) {
 
 
 function chat() {
-    if (compt === robot.length - 1) {
-        compt = 0
-    }
     $('.reponse').append('<p class="text-right">' + $(".pseudo").val() + ': ' + $(".texte").val() + '</p>')
     $(".reponse").scrollTop($(".reponse").height() + 1000000)
     setTimeout(function() {
+        if (compt === robot.length - 1) {
+            compt = 0
+        }
         $('.reponse').append('<p class="text-left">' + "robot : " + robot[compt] + '</p>')
         $(".reponse").scrollTop($(".reponse").height() + 1000000)
         compt++
