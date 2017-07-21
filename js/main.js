@@ -1,21 +1,20 @@
-var robot = ["bonjour", "++", "bonjour", "ca va?", "il fait chaud"]
+var robot = ["bonjour", "++", "ca va?", "il fait chaud"]
 var compt = 0
 
-
-    $('.submit').on('click', function() {
-chat()
-$(".texte").focus()
-    });
+$('.submit').on('click', function() {
+    chat()
+    $(".texte").focus()
+});
 
 
 $(".texte").keypress(function(e) {
-    if(e.which == 13) {
-chat()
-}
-  });
+    if (e.which == 13) {
+        chat()
+    }
+});
 
 
-function chat(){
+function chat() {
     if (compt === robot.length - 1) {
         compt = 0
     }
@@ -24,7 +23,7 @@ function chat(){
     setTimeout(function() {
         $('.reponse').append('<p class="text-left">' + "robot : " + robot[compt] + '</p>')
         $(".reponse").scrollTop($(".reponse").height() + 1000000)
+        compt++
     }, 1000);
     $(".texte").val("")
-    compt++
 }
