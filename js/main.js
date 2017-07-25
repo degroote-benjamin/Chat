@@ -15,6 +15,8 @@ $(".texte").keypress(function(e) {
 
 
 function chat() {
+  if($(".pseudo").val() !== "" && $(".texte").val() !== "")
+  {
     $('.reponse').append('<p class="text-right">' + $(".pseudo").val() + ': ' + $(".texte").val() + '</p>')
     $(".reponse").scrollTop($(".reponse").height() + 1000000)
     setTimeout(function() {
@@ -26,4 +28,5 @@ function chat() {
         compt++
     }, 1000);
     $(".texte").val("")
+  }
 }
